@@ -1,6 +1,6 @@
 import { Card } from './ui/card'
 import { Button } from './ui/button'
-import { Input } from './ui/input.tsx';
+import { Input } from './ui/input';
 import { Calendar, CheckCircle2, Circle, SquarePen, Trash2 } from 'lucide-react';
 import { cn } from '../lib/utils'
 import api from '../lib/axios';

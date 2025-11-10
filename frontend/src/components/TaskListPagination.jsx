@@ -7,7 +7,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "../components/ui/pagination"
+} from "./ui/pagination"
 import { cn } from '../lib/utils';
 
 const TaskListPagination = ({handleNext, handlePrev, handlePageChange, page, totalPages}) => {

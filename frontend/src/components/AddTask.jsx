@@ -1,7 +1,7 @@
 import { Plus } from 'lucide-react';
-import { Button } from './ui/button.jsx' 
-import { Card } from './ui/card.tsx';
-import { Input } from './ui/input.tsx';
+import { Button } from './ui/button.js' 
+import { Card } from './ui/card.js';
+import { Input } from './ui/input.js';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import api from '../lib/axios.js';
