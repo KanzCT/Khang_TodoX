@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // (ESNext = mới nhất, hỗ trợ import/export, async/await,...)
+    "useDefineForClassFields": true, //  dùng "class field" syntax theo chuẩn (giúp class hoạt động đúng kiểu hiện đại)
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // (DOM cho trình duyệt, ESNext cho hàm mới như Promise.allSettled,...)
+    "allowJs": true, // (hữu ích khi code xen kẽ)
+    "skipLibCheck": true, //  Bỏ qua kiểm tra lỗi trong thư viện (node_modules) để tăng tốc biên dịch
+    "esModuleInterop": true, // Cho phép dùng `import ... from "..."` cho cả module CommonJS
+    "allowSyntheticDefaultImports": true, // import các module ES6 mà không cần `default` cụ thể
+    "strict": true, // Bật chế độ kiểm tra nghiêm ngặt (Strict Mode) — giúp bắt nhiều lỗi tiềm ẩn sớm
+    "forceConsistentCasingInFileNames": true, // Đảm bảo không có lỗi do phân biệt chữ hoa/thường trong tên file
+    "module": "ESNext", // file export (ESNext = chuẩn ES Modules hiện đại, hợp với Vite)
+    "moduleResolution": "Bundler", // Cách TypeScript tìm file khi import (Bundler = kiểu hiện đại cho Vite/Next.js)
+    "resolveJsonModule": true, // Cho phép import file .json (VD: import data from './data.json')
+    "isolatedModules": true, // Đảm bảo mỗi file là 1 module độc lập (Vite yêu cầu để chạy React)
+    "noEmit": true, //  Không tạo file .js khi build (vì Vite tự xử lý build rồi)
+    "jsx": "react-jsx", // Cho phép dùng JSX trong file .tsx — rất quan trọng cho React
+    "baseUrl": ".", // Thiết lập đường dẫn gốc để TypeScript hiểu khi bạn dùng "@/"
+    "paths": { // Tạo alias import ngắn gọn: "@/components/Button" = "src/components/Button"
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"],                // 👈 để TypeScript hiểu vùng code
+}
